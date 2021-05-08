@@ -1,18 +1,22 @@
 defmodule RecursiveListLength do
   @moduledoc """
-  Documentation for `RecursiveListLength`.
+  return the length of the given list
   """
 
   @doc """
-  Hello world.
+  call functions to find the length of the given list
 
   ## Examples
-
-      iex> RecursiveListLength.hello()
-      :world
-
+  iex> RecursiveListLength.call([1, 2, 3])
+  3
   """
-  def hello do
-    :world
+  @spec call([number]) :: number
+  def call(list), do: list_length(list, 0)
+
+  defp list_length([], acc), do: acc
+
+  defp list_length([_head | tail], acc) do
+    acc = acc + 1
+    list_length(tail, acc)
   end
 end
