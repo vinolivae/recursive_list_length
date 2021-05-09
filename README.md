@@ -2,6 +2,9 @@
 
 **TODO: given a list of numbers count how many items the list has using recursion**
 
+## Problem
+
+Given a list of, add using recursion, all the numbers in the list and return the result.
 
 ## Installation
 
